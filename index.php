@@ -55,12 +55,12 @@ catch (exception $e)
   die('erreur : ' . $e->getMessage());
 }
 
-$req = $bdd->query('SELECT PSEUDO, ANSWER FROM Chat ORDER BY ID DESC LIMIT 0,10');
+$req = $bdd->query('SELECT pseudo, answer FROM Chat ORDER BY id DESC LIMIT 0,10');
 $rep = $req->fetchAll();
 
 foreach($rep as $val)
 {
-  echo htmlspecialchars($val['PSEUDO']) . ' dit : ' . htmlspecialchars($val['ANSWER']) . '<br />';
+  echo htmlspecialchars($val['pseudo']) . ' dit : ' . htmlspecialchars($val['answer']) . '<br />';
 }
 
 $req->closeCursor();

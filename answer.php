@@ -11,11 +11,11 @@ catch (exception $e)
   die('erreur : ' . $e->getMessage());
 }
 
-$req = $bdd->prepare('INSERT INTO Chat(PSEUDO, ANSWER) VALUES(:PSEUDO, :ANSWER)');
+$req = $bdd->prepare('INSERT INTO Chat(pseudo, answer) VALUES(:pseudo, :answer)');
 
 $req->execute(array(
-  'PSEUDO' => $_POST['pseudo'],
-  'ANSWER' => $_POST['answer']
+  'pseudo' => $_POST['pseudo'],
+  'answer' => $_POST['answer']
   ));
 
 $req->closeCursor();
