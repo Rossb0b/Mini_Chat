@@ -1,7 +1,6 @@
 
 <snippet>
   <content>
-# ${1:Project Name}
 
 "Yes We Web" project about creating a little chat for practising PHP/MySql.
 
@@ -23,7 +22,7 @@ Nicolas Hallaert.
 
 ## License
 
-TODO: Write license
-]]></content>
+
+</content>
   <tabTrigger>readme</tabTrigger>
 </snippet>
