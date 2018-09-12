@@ -3,14 +3,14 @@
   <content><![CDATA[
 # ${1:Project Name}
 
-TODO: "Yes We Web" project developed in solo, it's just a password requesti via $_POST in PHP.
+"Yes We Web" project about creating a little chat for practising PHP/MySql.
 
 ## Contributing
 
 1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
 5. Submit a pull request :D
 
 ## History
