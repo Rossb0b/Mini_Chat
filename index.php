@@ -39,7 +39,7 @@
   <label for='answer'>Indiquez votre message</label>
   <input type='text' name='answer' maxlength="140">
 
-  <input type='submit' value='Valider'/>
+  <input type='submit' name='submit' value='Valider'/>
 
 </form>
 
@@ -55,12 +55,12 @@ catch (exception $e)
   die('erreur : ' . $e->getMessage());
 }
 
-$req = $bdd->query('SELECT pseudo, answer FROM Chat ORDER BY id DESC LIMIT 0,10');
+$req = $bdd->query('SELECT pseudo, answer, DATE_FORMAT(date_answer, "%d/%m/%Y %Hh%imin%ss") as date, DATE_FORMAT(DATE_ADD(date_answer, INTERVAL 15 DAY), "%d/%m/%Y %Hh%imin%ss") as date_expire FROM Chat ORDER BY id DESC LIMIT 0,10');
 $rep = $req->fetchAll();
 
 foreach($rep as $val)
 {
-  echo htmlspecialchars($val['pseudo']) . ' dit : ' . htmlspecialchars($val['answer']) . '<br />';
+  echo htmlspecialchars($val['pseudo']) . ' dit : ' . htmlspecialchars($val['answer']) . '<br />' . $val['date'] . ' expire le ' . $val['date_expire'] . '<br />';
 }
 
 $req->closeCursor();
